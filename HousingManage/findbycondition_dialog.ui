@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FindByCondition_Dialog</class>
+ <widget class="QDialog" name="FindByCondition_Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>339</width>
+    <height>262</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>按条件查找</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="number_heckBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>60</y>
+     <width>87</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>工号</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="name_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>90</y>
+     <width>87</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>姓名</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="age_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>120</y>
+     <width>87</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>年龄</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="degree_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>150</y>
+     <width>87</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>学位</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="position_checkBox">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>180</y>
+     <width>87</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>职称</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="number_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>60</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>90</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="age_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>120</y>
+     <width>83</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>10+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>20+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>30+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>40+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>50+</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>60+及以上</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="degree_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>150</y>
+     <width>83</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>高中</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>本科</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>硕士</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>博士</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="position_comboBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>180</y>
+     <width>83</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>教授</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>副教授</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>讲师</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>助教</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>220</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>请选择需要筛选的条件</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Find_pushButton">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>220</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查找</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Find_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>FindByCondition_Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

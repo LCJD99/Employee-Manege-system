@@ -1,0 +1,59 @@
+#include "widgetdelegate.h"
+
+#include <QComboBox>
+
+WidgetDelegate::WidgetDelegate(QItemDelegate *parent) : QItemDelegate(parent) {
+    this->m_comboBoxList << "";
+}
+
+WidgetDelegate::WidgetDelegate(QStringList list, QItemDelegate *parent) :QItemDelegate(parent) {
+    this->m_comboBoxList = list;
+}
+
+WidgetDelegate::~WidgetDelegate() {
+
+}
+
+
+QWidget *WidgetDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const {
+    Q_UNUSED(option);
+    Q_UNUSED(index);
+    QComboBox *editor = new QComboBox(parent);
+    return editor;
+}
+
+void WidgetDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const {
+    Q_UNUSED(index);
+    QComboBox *cob = static_cast<QComboBox *>(editor);
+    cob->addItems(m_comboBoxList);
+}
+
+void WidgetDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const {
+
+    editor->setGeometry(option.rect);
+}
+
+
+void WidgetDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const {
+    QComboBox *comboBox = static_cast<QComboBox *>(editor);
+
+    model->setData(index, comboBox->currentText());
+}
+
+
+QString WidgetDelegate::getCurrentComboBoxData(int index) {
+    return this->m_comboBoxList.at(index);
+}
+
+void WidgetDelegate::insertCoBData(QString str) {
+    this->m_comboBoxList.append(str);
+}
+
+void WidgetDelegate::removeCobData(QString str) {
+    for (int i = 0; i < this->m_comboBoxList.size(); i++) {
+        if (str == this->m_comboBoxList[i]) {
+            this->m_comboBoxList.removeAt(i);
+            return;
+        }
+    }
+}
